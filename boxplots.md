@@ -1,17 +1,22 @@
-boxplots
-================
+---
+title: "boxplots"
+output:
+  github_document
+---
 
 ### Boxplot pro-tips
 
-  - Helps answer the question: "how does X (ind. var) affect Y (dep.
-    var)?
+* Helps answer the question: "how does X (ind. var) affect Y (dep. var)?
 
-<!-- end list -->
+```{r, include=F}
+library(tidyverse)
+library(tidyquant)
+theme_set(theme_tq())
+```
 
-``` r
+```{r}
 mtcars %>% tibble() %>% 
     ggplot(aes(x = as.factor(cyl), y = mpg)) +
     geom_boxplot() + coord_flip()
 ```
 
-![](boxplots_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
