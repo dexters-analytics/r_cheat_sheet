@@ -1,0 +1,21 @@
+---
+title: "boxplots"
+output:
+  github_document:
+    html_preview: false
+editor_options: 
+  chunk_output_type: console
+---
+
+### Boxplot pro-tips
+
+```{r}
+library(tidyverse)
+library(tidyquant)
+theme_set(theme_tq())
+
+mtcars %>% tibble() %>% 
+    ggplot(aes(x = as.factor(cyl), y = mpg)) +
+    geom_boxplot() + coord_flip()
+```
+
