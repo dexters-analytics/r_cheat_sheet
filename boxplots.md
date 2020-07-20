@@ -1,8 +1,4 @@
----
-title: "boxplots"
-output:
-  github_document
----
+### BOXPLOTS
 
 ### Boxplot pro-tips
 
@@ -19,7 +15,7 @@ library(tidyquant)
 theme_set(theme_tq())
 ```
 
-#### 1) Check for Normalcy
+#### 1) Check for Normalcy (informally)
 
 ```{r}
 mtcars %>% tibble() %>% 
