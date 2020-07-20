@@ -1,4 +1,4 @@
-### ggplot legends
+### LEGENDS: GGPLOT
 
 
 ### Different ways to deal with legends
