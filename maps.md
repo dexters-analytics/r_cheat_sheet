@@ -47,3 +47,25 @@ malaria_incidents_by_country %>%
     left_join(map_data("world"), by = c(mapname = "region"))
 ```
 
+
+#### Do i want to keep below? (process later)
+
+# example
+library(tidyverse)
+library(maps)
+
+# get data
+malaria_incidents_by_country <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-11-13/malaria_inc.csv")
+
+# prep data for mapping
+malaria_incidents_by_country %>%
+    setNames(c("entity", "code", "year", "incidents")) %>% 
+    
+    # join iso data to my data
+    inner_join(maps::iso3166 %>% 
+                   select(a3, mapname), by = c(code = "a3")) %>%
+    
+    # join now to spatial data (lat/long)
+    left_join(map_data("world"), by = c(mapname = "region"))
+
+
