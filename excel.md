@@ -1,12 +1,11 @@
 # WORKING WITH EXCEL
 
 
-#### Writing + Saving files 
+#### save to clipboard (super helpful)
+
+This a great way to quickly summarize a bit of data then copy from R and paste into Excel.
 
 ```{r}
-library(writexl)
-
-# save to clipboard (super helpful)
-write.table("clipboard", sep="\t", col.names = F, row.names = F)
+utils::write.table("clipboard", sep="\t", col.names = F, row.names = F)
 ```
 
