@@ -8,6 +8,8 @@
 
 ```{r}
 library(ggthemes) # to access theme_map for clean canvis
+library(ggplot2)  # ggplot2::coord_map() for adding map projections
+
 library(maps)
 ```
 
